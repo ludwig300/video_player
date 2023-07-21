@@ -5,20 +5,36 @@
   <link rel="stylesheet" href="font-awesome.min.css">
   <meta charset="utf-8">
   <style type="text/css">
-    button {
+    .player-button {
       border-style: none;
       cursor: pointer;
       color: white;
-      background-color: transparent
+      background-color: transparent;
+    }
+    .button-c {
+      background-color: black;
+    }
+    .player-size {
+      width: 800px;
+      height: 600px;
+    }
+    .player-scale {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;">
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
-    <div style="background-color: black;">
-      <button class="js-play-button" hidden><i class="fa fa-play" aria-hidden="true"></i></a></button>
-      <button class="js-pause-button" hidden><i class="fa fa-pause" aria-hidden="true"></i></a></button>
+  <div id="player" class="player-size">
+    <div class="js-video-container player-scale"></div>
+      <div class="button-c">
+        <button class="js-play-button player-button" hidden>
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <button class="js-pause-button player-button" hidden>
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
