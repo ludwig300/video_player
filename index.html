@@ -18,6 +18,9 @@
       width: 800px;
       height: 600px;
     }
+    .player-shadow {
+      box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+    }
     .player-scale {
       width: 100%;
       height: 100%;
@@ -25,16 +28,15 @@
   </style>
 </head>
 <body>
-  <div id="player" class="player-size">
+  <div id="player" class="player-size player-shadow">
     <div class="js-video-container player-scale"></div>
-      <div class="button-c">
-        <button class="js-play-button player-button" hidden>
-          <i class="fa fa-play" aria-hidden="true"></i>
-        </button>
-        <button class="js-pause-button player-button" hidden>
-          <i class="fa fa-pause" aria-hidden="true"></i>
-        </button>
-      </div>
+    <div class="button-c">
+      <button class="js-play-button player-button" hidden>
+        <i class="fa fa-play" aria-hidden="true"></i>
+      </button>
+      <button class="js-pause-button player-button" hidden>
+        <i class="fa fa-pause" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
