@@ -18,15 +18,14 @@
     .button-c {
       background-color: black;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
+      align-items: center;
     }
-    .player-size {
+    .player-container {
       width: 800px;
       height: 600px;
       display: flex;
       flex-direction: column;
-    }
-    .player-shadow {
       box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
     }
     .player-scale {
@@ -35,23 +34,29 @@
   </style>
 </head>
 <body>
-  <div id="player" class="player-size player-shadow">
+  <div id="player" class="player-container">
     <div class="js-video-container player-scale"></div>
     <div class="button-c">
-      <button class="js-play-button player-button" hidden>
-        <i class="fa fa-play" aria-hidden="true"></i>
-      </button>
-      <button class="js-pause-button player-button" hidden>
-        <i class="fa fa-pause" aria-hidden="true"></i>
-      </button>
-      <button class="js-volume-button player-button" hidden>
-        <i class="fa fa-volume-off" aria-hidden="true"></i>
-      </button>
-      <button class="js-mute-button player-button" hidden>
-        <i class="fa fa-volume-up" aria-hidden="true"></i>
-      </button>
+      <div>
+        <button class="js-play-button player-button" hidden>
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <button class="js-pause-button player-button" hidden>
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+        <button class="js-volume-button player-button" hidden>
+          <i class="fa fa-volume-off" aria-hidden="true"></i>
+        </button>
+        <button class="js-mute-button player-button" hidden>
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div>
+        <button class="js-fullscreen-button player-button">
+          <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
-
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
